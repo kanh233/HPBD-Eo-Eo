@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật</title>
+    <style>
+        body {
+            background-color: #ADD8E6; /* Màu xanh dương pastel nhạt */
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .image-container img {
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+        .message, .video-container {
+            display: none;
+            margin-top: 20px;
+        }
+        .video-container video {
+            width: 80%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chúc Mừng Sinh Nhật em bé Eọ Eọ ♥!</h1>
+        <p>Click vào các hình ảnh để xem lời chúc và video nhé!</p>
+        <div class="image-container">
+            <img src="D:\New folder\HY\Bae\z5878441686228_e8c98e144f98c40af82ea978eba711db.jpg" alt="Image 1" onclick="showMessage('Mừng Sinh Nhật em bé Eọ Eọ ♥ \n Chúc embe cute của anh Bi tuổi 22 sinh nhật vui vẻ nha. Luôn may mắn và hạnh phúc cùng với anh Bi nha. Embe đợi tháng 12 anh Bi về bù cho bae nha. \n Ich liebe dich mein Schatz ♥')">
+            <img src="D:\New folder\HY\Bae\z5878441563326_0381288396c21ecc91a0dd923fe233e2.jpg" alt="Image 2" onclick="showMessage('Embe ơi, embe đợi anh Bi về nha, mình cùng nhau cố gắng nha bé, anh biết là mình không ở bên nhau bé sẽ bị thiệt hơn so với những người khác. Nhưng mình cùng nhau cố gắng nha bé, anh hứa với bé sẽ luôn yêu thương bé và anh cũng sẽ cố gắng để sau này mình bên nhau hạnh phúc nha. \n Anh mong muốn nữa bé qua đây vs anh á, bé chịu qua vs anh thì anh sẽ cố gắng hết sức rồi cố gắng để nữa anh về nói chuyện vs nhà anh rồi nói chuyện vs nhà bé nha, xong rồi mình cùng làm 1 đám cưới thật đẹp nha bé, sau đó anh vs bé qua bên đây nha, để mình bên nhau hạnh phúc hơn và sau này mình sẽ về Việt Nam nha ♥. \n Anh Bi thương em bé Eọ Eọ nhiều lắm ♥')">
+            <img src="D:\New folder\HY\Bae\z5878441453291_cf685def1d28f97e524e0fab291c5d9b.jpg"4" alt="Image 3" onclick="showVideo()">
+        </div>
+        <div class="message" id="message"></div>
+        <div class="video-container" id="video-container">
+            <video controls>
+                <source src="D:\New folder\HY\Bae\hpbd.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video.
+            </video>
+        </div>
+    </div>
+    <audio id="background-music" loop>
+        <source src="D:\NGÀY ĐẦU TIÊN - ĐỨC PHÚC _ DANCE PERFORMANCE.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ âm thanh.
+    </audio>
+    <script>
+        function showMessage(message) {
+            document.getElementById('message').innerText = message;
+            document.getElementById('message').style.display = 'block';
+            document.getElementById('video-container').style.display = 'none';
+        }
+
+        function showVideo() {
+            document.getElementById('message').style.display = 'none';
+            document.getElementById('video-container').style.display = 'block';
+        }
+
+        window.onload = function() {
+            document.getElementById('background-music').play();
+        }
+    </script>
+</body>
+</html>
